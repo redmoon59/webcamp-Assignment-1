@@ -1,0 +1,95 @@
+*{
+  poadding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  background-color: #FF9A4B;
+}
+
+main{
+  width: 960px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.contents-img1{
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.contents-img2{
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.contents-img3{
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.contents{
+  width: 300px;
+  padding:10px;
+  margin-right:30px;
+  background-color: #EEEEEE;
+  position: relative;
+}
+
+/*.stepの親てある.contentsにrelativeの指定がないとstepの基準が全体になってしまう。*/
+/*ー＞relativeを設定することで、そのコンテンツを基準に位置を変えることができる。*/
+
+.contents:last-child{
+  margin: 0;
+}
+
+.contents-title{
+  padding-top:15px;
+  padding-bottom: 5px;
+}
+
+.step{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FF9A4B;
+  color: #FFFFFF;
+}
+
+footer{
+  width:100%;
+  height: 50px;
+  background-color:#AAAAAA;
+}
+
+
+@media screen and (max-width:768px){
+  main{
+    width:100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contents{
+    width:90%;
+    margin: 0;
+  }
+
+  .contents:first-child,
+  .contents:nth-child(2){
+    margin-bottom: 20px
+  }
+
+}
